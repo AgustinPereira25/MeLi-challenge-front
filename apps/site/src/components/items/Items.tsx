@@ -41,7 +41,7 @@ export const ItemsResultList = () => {
   return (
     <>
       <Seo 
-          title={ `${searchParams.toString().replace('search=','')} | Mercado Libre 📦` }
+          title={ `${searchParams.get('search')} | Mercado Libre 📦` }
           description={`Encontrá ${searchParams} en MercadoLibre.com.uy! Entrá y conocé nuestras increíbles ofertas y promociones. Descubrí la mejor forma de comprar online.`}
         />
       <div className='flex flex-col py-4 h-full'>

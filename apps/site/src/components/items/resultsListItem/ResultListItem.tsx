@@ -32,6 +32,7 @@ export const ResultListItem:React.FC<Props> = ({ item }) => {
                     src='/ic_shipping.png' 
                     className='pl-2'
                     alt={ item.title }
+                    title='Envío gratis'
                   />
                 
                 ) 
