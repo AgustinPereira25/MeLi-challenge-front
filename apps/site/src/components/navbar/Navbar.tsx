@@ -1,7 +1,6 @@
 import React from 'react'
 import SearchInput from './searchInput/SearchInput'
 import { useNavigate } from 'react-router'
-import logo from '../../assets/Logo_ML.png'
 
 export const Navbar:React.FC = () => {
   const navigateTo = useNavigate();
@@ -12,7 +11,7 @@ export const Navbar:React.FC = () => {
           <img
             className='cursor-pointer' 
             alt="ML logo" 
-            src={logo}
+            src='/Logo_ML.png'
             height={70}
             width={60}
           />

@@ -1,14 +1,15 @@
-import React, { useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export function SearchInput() {
 
   const navigateTo = useNavigate();
-  const textInput = useRef(null);
-  const [keywords, setKeywords] = useState('');
+
+  const [keywords, setKeywords] = useState('');   
   
   function handleSubmit() {
     navigateTo(`/items/search?=${keywords}`);
+    setKeywords('')
   }
 
   return (
@@ -18,7 +19,6 @@ export function SearchInput() {
             className='flex w-full'
         >
             <input
-                ref={textInput}
                 placeholder="Nunca dejes de buscar" 
                 className='w-full h-9 pl-4'
                 onChange={ e => setKeywords(e.target.value) }
@@ -26,7 +26,7 @@ export function SearchInput() {
             <Link to = {`/items?search=${keywords}`}>
               <button type="submit" className='h-full w-full p-2 bg-zinc-100 hover:bg-zinc-200 transition duration-500'>
                   <img 
-                      src="src/assets/ic_search.png" 
+                      src="/ic_Search.png" 
                       alt="Buscar"
                   />
               </button>

@@ -29,7 +29,7 @@ export const ResultListItem:React.FC<Props> = ({ item }) => {
               { item.free_shipping && (
                 
                   <img 
-                    src='src/assets/ic_shipping.png' 
+                    src='/ic_shipping.png' 
                     className='pl-2'
                     alt={ item.title }
                   />

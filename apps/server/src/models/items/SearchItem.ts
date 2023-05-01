@@ -40,9 +40,10 @@ export class SearchItems {
   }
 
   private async searchItems(query: string): Promise<MLSearch> {
+    // console.log(query)
     // eslint-disable-next-line no-useless-catch
     try {
-      const response = await axios.get<MLSearch>(`${API_URL}/sites/MLA/search?q=${query}`);
+      const response = await axios.get<MLSearch>(`${API_URL}/sites/MLA/search?q=${query.replace('search=','')}`);
       return response.data;
     } catch (error) {
       throw error;
@@ -55,7 +56,8 @@ export class SearchItems {
     const categoriesFilter = searchData.available_filters.find(filter => filter.id === 'category');
     const sortedCategoriesByResults = categoriesFilter ? categoriesFilter.values.sort((a, b) => b.results - a.results) : [];
     const mostResultsCategoryId = sortedCategoriesByResults[0]?.id;
-
+    // console.log(sortedCategoriesByResults);
+    // console.log(categoriesFilter.values);
     if (mostResultsCategoryId) {
       try {
         const response = await axios.get<MLCategory>(`${API_URL}/categories/${mostResultsCategoryId}`);
