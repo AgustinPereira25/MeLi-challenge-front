@@ -17,6 +17,8 @@ Run `nx preview site` or  `npx nx preview site` in order to run React app. Navig
 
 Run `nx serve server` or  `npx nx serve server` in order to run Express app. Navigate to http://localhost:3333/. 
 
+## Using App Metrics for monitoring API responses and more.
+After running server and site, go to http://localhost:3001/appmetrics-dash/ in order to view the dashboard.
 
 ## Features
 - Typescript
