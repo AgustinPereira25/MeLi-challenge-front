@@ -15,7 +15,7 @@ export const ItemsResultList = () => {
   const [items, setItems] = useState<SearchResult>();
 
   useEffect(() => {
-    
+
     fetch(`${API_URL}/items?q=${searchParams}`, { headers: {'Access-Control-Allow-Origin': '*'} })
       .then((response) => response.json())
       .then((data) => {
@@ -67,3 +67,5 @@ export const ItemsResultList = () => {
     </>
   )
 }
+
+export default ItemsResultList;

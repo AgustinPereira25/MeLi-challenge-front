@@ -89,3 +89,5 @@ export const DetailedItem = () => {
     </>
   )
 }
+
+export default DetailedItem;

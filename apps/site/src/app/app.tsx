@@ -7,9 +7,12 @@ import Layout from '../components/Layout/Layout';
 
 export function App() {
   return (
-    <Layout>
-      <Outlet/>
-    </Layout>
+    // <Layout>
+    //   <Outlet/>
+    // </Layout>
+    <>
+      <p>....</p>
+    </>
   );
 }
 

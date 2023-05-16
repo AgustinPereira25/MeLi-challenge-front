@@ -1,11 +1,13 @@
 import React from 'react';
 import { Seo } from '../seo';
 import { Navbar } from '../navbar';
+import { Outlet } from 'react-router-dom';
 
 interface Props{
     children: React.ReactNode
 }
-const Layout:React.FC<Props> =({children}) =>{
+// const Layout:React.FC<Props> =({children}) =>{
+const Layout:React.FC =() =>{ //added
     return(
         <>
             <Seo 
@@ -18,7 +20,9 @@ const Layout:React.FC<Props> =({children}) =>{
             <div className='flex flex-col grow w-full min-h-screen  bg-zinc-100'>
                 <Navbar/>
                 <div className="flex justify-center h-full">
-                    <main>{children}</main>
+                    <main>
+                        <Outlet />    
+                    </main>
                 </div>
             </div>
         </>

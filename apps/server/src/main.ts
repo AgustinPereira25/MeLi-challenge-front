@@ -2,6 +2,10 @@
  * This is not a production server yet!
  * This is only a minimal backend to get started.
  */
+// import 'appmetrics-dash';
+import dash from 'appmetrics-dash';
+dash.monitor();
+
 import App from './app'; // app con la configuración adecuada (constructor con el registro de los controllers)
 
 import { Router } from 'express';
